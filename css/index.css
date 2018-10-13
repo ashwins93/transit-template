@@ -20,12 +20,50 @@ body {
   background-size: cover;
   background-position: center;
   padding: 3rem;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
 }
 .container {
   width: 100%;
   max-width: 1024px;
   margin: 0 auto;
-  height: 100vh;
   background-color: white;
   border-radius: 10px;
+}
+.header {
+  padding: 2rem 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+.header__brand {
+  text-decoration: none;
+  color: inherit;
+}
+.header__brand-title {
+  color: black;
+  transition: all 0.3s 0.15s;
+}
+.header__brand-author {
+  color: #bdbdbd;
+  transition: all 0.3s;
+}
+.header__brand:hover .header__brand-title,
+.header__brand:hover .header__brand-author {
+  color: #ee6787;
+}
+.hamburger {
+  cursor: pointer;
+}
+.hamburger__line {
+  width: 25px;
+  height: 2px;
+  background-color: #bdbdbd;
+  display: block;
+  transition: all 0.3s;
+}
+.hamburger__line:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+.hamburger:hover .hamburger__line {
+  background-color: #ee6787;
 }

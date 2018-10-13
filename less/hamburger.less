@@ -1,0 +1,19 @@
+.hamburger {
+  cursor: pointer;
+
+  &__line {
+    width: 25px;
+    height: 2px;
+    background-color: #bdbdbd;
+    display: block;
+    transition: all 0.3s;
+
+    &:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &:hover &__line {
+    background-color: #ee6787;
+  }
+}
