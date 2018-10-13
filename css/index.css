@@ -1,5 +1,31 @@
-/* Hello */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
 body {
-  background-color: palevioletred;
+  font-size: 1.6rem;
+}
+.background-center {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+body {
+  background-image: url(../assets/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 3rem;
+}
+.container {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
   height: 100vh;
+  background-color: white;
+  border-radius: 10px;
 }
