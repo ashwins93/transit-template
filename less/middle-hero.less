@@ -1,0 +1,27 @@
+.middle-hero {
+  display: flex;
+
+  &__left,
+  &__right {
+    width: 50%;
+  }
+
+  &__left {
+    padding: 7rem;
+    background-image: linear-gradient(
+      to right,
+      rgba(238, 103, 134, 1),
+      rgba(245, 148, 96, 1)
+    );
+  }
+
+  &__right {
+    background-image: linear-gradient(
+        to right,
+        rgba(90, 98, 132, 0.3),
+        rgba(90, 98, 132, 0.3)
+      ),
+      url(../assets/middle-hero.jpg);
+    .background-center();
+  }
+}
