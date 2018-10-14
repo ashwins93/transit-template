@@ -31,6 +31,7 @@ body {
   margin: 0 auto;
   background-color: white;
   border-radius: 10px;
+  overflow: hidden;
 }
 .secondary-heading {
   font-size: 2.6rem;
@@ -297,4 +298,24 @@ body {
 .panel__address {
   font-style: normal;
   font-size: 1.8rem;
+}
+.footer {
+  padding: 3rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: #eee;
+}
+.footer__copyright {
+  color: #999;
+}
+.footer__social-link {
+  text-decoration: none;
+  color: #999;
+  transition: all 0.3s;
+}
+.footer__social-link:not(:last-child) {
+  margin-right: 1rem;
+}
+.footer__social-link:hover {
+  color: #ee6787;
 }
