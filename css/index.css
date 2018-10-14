@@ -48,8 +48,6 @@ body {
 }
 .text--white {
   color: #fff;
-  margin-left: 0;
-  margin-right: 0;
 }
 .header {
   padding: 2rem 3rem;
@@ -216,4 +214,45 @@ body {
 .pagination__dots--selected {
   background-color: #ee6787;
   border-color: #ee6787;
+}
+.subscriptions {
+  padding: 8rem 3rem;
+  background-image: linear-gradient(to right, #937f8f, #5a6284);
+  text-align: center;
+}
+.form {
+  max-width: 50rem;
+  margin: 0 auto;
+  display: flex;
+}
+.form__input {
+  flex-grow: 1;
+  padding: 1.5rem;
+  font-size: 1.8rem;
+  background-color: transparent;
+  border: 2px solid #eee;
+  border-radius: 5px 0 0 5px;
+  font-family: inherit;
+  font-weight: inherit;
+  caret-color: #fff;
+}
+.form__input::placeholder {
+  color: #ddd;
+}
+.form__input:focus {
+  outline: none;
+}
+.form__button {
+  background-color: #fff;
+  border: 2px solid #fff;
+  padding: 1rem 2rem;
+  font-size: 1.8rem;
+  color: #5a6284;
+  border-radius: 0 5px 5px 0;
+  font-family: inherit;
+  font-weight: inherit;
+  cursor: pointer;
+}
+.form__button:focus {
+  outline: none;
 }
