@@ -256,3 +256,45 @@ body {
 .form__button:focus {
   outline: none;
 }
+.contact {
+  padding: 8rem 3rem;
+  text-align: center;
+}
+.contact__triptych {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+}
+.panel {
+  width: 33%;
+}
+.panel:not(:last-child) {
+  border-right: 1px solid #ddd;
+}
+.panel__icon {
+  font-size: 2.4rem;
+  color: #ee6787;
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #eee;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+}
+.panel__link {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s;
+  font-size: 1.8rem;
+}
+.panel__link:hover {
+  color: #ee6787;
+  border-bottom: 1px dashed #ee6787;
+}
+.panel__address {
+  font-style: normal;
+  font-size: 1.8rem;
+}
