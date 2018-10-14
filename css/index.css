@@ -131,12 +131,14 @@ body {
 }
 .features__boxes {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  max-width: 60rem;
   position: relative;
+  margin: 0 auto;
 }
 .features__boxes::after {
   content: '';
-  width: 60%;
+  width: 100%;
   height: 2px;
   top: 4.9rem;
   background-color: #eee;
@@ -145,9 +147,6 @@ body {
 .features__box {
   z-index: 3;
   background-color: #fff;
-}
-.features__box:not(:last-child) {
-  margin-right: 7%;
 }
 .features__box-icon {
   font-size: 4rem;
@@ -180,4 +179,41 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+.showcase {
+  padding: 8rem 3rem;
+  text-align: center;
+}
+.card {
+  max-width: 50rem;
+  margin: 0 auto;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.card__img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.card__caption {
+  padding: 1rem 0;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+.pagination__dots {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+}
+.pagination__dots:not(:last-child) {
+  margin-right: 2rem;
+}
+.pagination__dots--selected {
+  background-color: #ee6787;
+  border-color: #ee6787;
 }

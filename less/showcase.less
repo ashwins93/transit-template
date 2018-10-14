@@ -1,0 +1,44 @@
+.showcase {
+  padding: 8rem 3rem;
+  text-align: center;
+}
+
+.card {
+  max-width: 50rem;
+  margin: 0 auto;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+
+  &__img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__caption {
+    padding: 1rem 0;
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+
+  &__dots {
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+
+    &--selected {
+      background-color: #ee6787;
+      border-color: #ee6787;
+    }
+  }
+}
