@@ -1,0 +1,51 @@
+.nav {
+  background-color: palevioletred;
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 40rem;
+  padding: 4rem;
+  transform: translateX(100%);
+  transition: all 0.5s;
+
+  &--open {
+    transform: translate(0);
+  }
+
+  background-image: linear-gradient(
+    to right,
+    rgba(238, 103, 134, 1),
+    rgba(245, 148, 96, 1)
+  );
+
+  &__link {
+    display: block;
+    text-decoration: none;
+    color: #eee;
+    padding: 1.5rem 0;
+    font-size: 1.8rem;
+    transition: all 0.3s;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #fff;
+    }
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  &__links {
+    margin-bottom: 3rem;
+  }
+
+  &__close {
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+  }
+}

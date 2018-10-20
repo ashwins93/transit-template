@@ -125,6 +125,17 @@ body {
 .cta__button:hover {
   background-color: rgba(255, 255, 255, 0.06);
 }
+.cta__button--block {
+  display: block;
+  text-align: center;
+}
+.cta__button--white {
+  background-color: #fff;
+  color: #ee6786;
+}
+.cta__button--white:hover {
+  background-color: #fff;
+}
 .features {
   padding: 8rem 3rem;
   text-align: center;
@@ -319,4 +330,47 @@ body {
 }
 .footer__social-link:hover {
   color: #ee6787;
+}
+.nav {
+  background-color: palevioletred;
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 40rem;
+  padding: 4rem;
+  transform: translateX(100%);
+  transition: all 0.5s;
+  background-image: linear-gradient(to right, #ee6786, #f59460);
+}
+.nav--open {
+  transform: translate(0);
+}
+.nav__link {
+  display: block;
+  text-decoration: none;
+  color: #eee;
+  padding: 1.5rem 0;
+  font-size: 1.8rem;
+  transition: all 0.3s;
+}
+.nav__link:not(:last-child) {
+  border-bottom: 1px solid #fff;
+}
+.nav__link:hover {
+  color: #fff;
+}
+.nav__links {
+  margin-bottom: 3rem;
+}
+.nav__close {
+  position: absolute;
+  top: 2rem;
+  right: 3rem;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+.u-margin-bottom-sm {
+  margin-bottom: 2rem !important;
 }
