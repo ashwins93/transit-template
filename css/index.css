@@ -220,6 +220,11 @@ body::after {
   flex-shrink: 0;
   margin-right: 5rem;
   display: inline-block;
+  opacity: 0.6;
+  transition: all 1.5s;
+}
+.card--active {
+  opacity: 1;
 }
 .card:first-child {
   margin-left: 5rem;

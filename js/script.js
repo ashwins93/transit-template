@@ -25,7 +25,7 @@ function scrollSlider(x, y, z, element) {
   let scrollPos = y + z / 2 - x / 2;
   TweenMax.to(element, 1.5, {
     scrollLeft: scrollPos,
-    easing: Sine.easeInOut,
+    ease: Sine.easeInOut,
   });
 }
 
@@ -33,30 +33,39 @@ const cards = document.querySelectorAll('.card');
 const slider = document.querySelector('.slider');
 const dots = document.querySelectorAll('.pagination__dots');
 
+function selectCard(dataCard) {
+  const card = document.querySelector(`.card[data-card="${dataCard}"]`);
+  const dot = document.querySelector(
+    `.pagination__dots[data-card="${dataCard}"]`,
+  );
+
+  const z = card.clientWidth;
+  const y = card.offsetLeft - slider.offsetLeft;
+  const x = slider.clientWidth;
+
+  scrollSlider(x, y, z, slider);
+
+  dots.forEach(innerDot => {
+    innerDot.classList.remove('pagination__dots--selected');
+    dot.classList.add('pagination__dots--selected');
+  });
+
+  cards.forEach(element => {
+    element.classList.remove('card--active');
+    card.classList.add('card--active');
+  });
+}
+
 cards.forEach(card => {
   card.addEventListener('click', function() {
-    const z = card.clientWidth;
-    const y = card.offsetLeft - slider.offsetLeft;
-    const x = slider.clientWidth;
-
-    scrollSlider(x, y, z, slider);
+    selectCard(card.dataset.card);
   });
 });
 
 dots.forEach(dot => {
   dot.addEventListener('click', function() {
-    const card = document.querySelector(
-      `.card[data-card="${dot.dataset.card}"]`,
-    );
-    const z = card.clientWidth;
-    const y = card.offsetLeft - slider.offsetLeft;
-    const x = slider.clientWidth;
-
-    scrollSlider(x, y, z, slider);
-
-    dots.forEach(innerDot => {
-      innerDot.classList.remove('pagination__dots--selected');
-      dot.classList.add('pagination__dots--selected');
-    });
+    selectCard(dot.dataset.card);
   });
 });
+
+selectCard(Math.ceil(cards.length / 2));
