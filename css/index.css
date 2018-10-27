@@ -244,6 +244,7 @@ body::after {
   height: 1.2rem;
   border-radius: 50%;
   border: 1px solid #ccc;
+  cursor: pointer;
 }
 .pagination__dots:not(:last-child) {
   margin-right: 2rem;

@@ -31,6 +31,7 @@ function scrollSlider(x, y, z, element) {
 
 const cards = document.querySelectorAll('.card');
 const slider = document.querySelector('.slider');
+const dots = document.querySelectorAll('.pagination__dots');
 
 cards.forEach(card => {
   card.addEventListener('click', function() {
@@ -39,5 +40,23 @@ cards.forEach(card => {
     const x = slider.clientWidth;
 
     scrollSlider(x, y, z, slider);
+  });
+});
+
+dots.forEach(dot => {
+  dot.addEventListener('click', function() {
+    const card = document.querySelector(
+      `.card[data-card="${dot.dataset.card}"]`,
+    );
+    const z = card.clientWidth;
+    const y = card.offsetLeft - slider.offsetLeft;
+    const x = slider.clientWidth;
+
+    scrollSlider(x, y, z, slider);
+
+    dots.forEach(innerDot => {
+      innerDot.classList.remove('pagination__dots--selected');
+      dot.classList.add('pagination__dots--selected');
+    });
   });
 });
