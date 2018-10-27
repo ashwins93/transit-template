@@ -5,6 +5,7 @@
   &__boxes {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     max-width: 60rem;
     position: relative;
     margin: 0 auto;
@@ -16,12 +17,30 @@
       top: 4.9rem;
       background-color: #eee;
       position: absolute;
+
+      @media (max-width: 37.5em) {
+        display: none;
+      }
     }
   }
 
   &__box {
     z-index: 3;
     background-color: #fff;
+
+    @media (max-width: 37.5em) {
+      width: 50%;
+      padding: 2rem;
+
+      &:nth-of-type(1),
+      &:nth-of-type(2) {
+        border-bottom: 1px solid #ddd;
+      }
+
+      &:nth-of-type(odd) {
+        border-right: 1px solid #ddd;
+      }
+    }
 
     &-icon {
       font-size: 4rem;
@@ -34,6 +53,10 @@
       border: 2px solid #eee;
       border-radius: 50%;
       margin-bottom: 2rem;
+
+      @media (max-width: 37.5em) {
+        margin: 0 auto 2rem;
+      }
     }
 
     &-caption {

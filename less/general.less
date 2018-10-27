@@ -13,6 +13,10 @@ body {
   color: #444;
   line-height: 1.5;
 
+  @media (max-width: 25em) {
+    padding: 0;
+  }
+
   &.nav-menu-open::after {
     visibility: visible;
     opacity: 1;
@@ -41,6 +45,10 @@ body {
   background-color: white;
   border-radius: 10px;
   overflow: hidden;
+
+  @media (max-width: 25em) {
+    border-radius: 0;
+  }
 }
 
 .secondary-heading {

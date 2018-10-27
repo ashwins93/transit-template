@@ -32,6 +32,7 @@ function scrollSlider(x, y, z, element) {
 const cards = document.querySelectorAll('.card');
 const slider = document.querySelector('.slider');
 const dots = document.querySelectorAll('.pagination__dots');
+let currentCard = 1;
 
 function selectCard(dataCard) {
   const card = document.querySelector(`.card[data-card="${dataCard}"]`);
@@ -54,6 +55,8 @@ function selectCard(dataCard) {
     element.classList.remove('card--active');
     card.classList.add('card--active');
   });
+
+  currentCard = dataCard;
 }
 
 cards.forEach(card => {
@@ -68,4 +71,6 @@ dots.forEach(dot => {
   });
 });
 
-selectCard(Math.ceil(cards.length / 2));
+selectCard(currentCard);
+
+// setInterval(() => selectCard(++currentCard % (cards.length + 1)), 3000);
