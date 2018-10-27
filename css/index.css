@@ -209,20 +209,27 @@ body::after {
   background-position: center;
 }
 .showcase {
-  padding: 8rem 3rem;
+  padding: 8rem 0;
   text-align: center;
 }
 .card {
-  max-width: 50rem;
-  margin: 0 auto;
+  width: 50rem;
   border: 1px solid #eee;
   border-radius: 8px;
   overflow: hidden;
+  flex-shrink: 0;
+  margin-right: 5rem;
+  display: inline-block;
+}
+.card:first-child {
+  margin-left: 5rem;
 }
 .card__img {
   display: block;
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  height: 25rem;
+  object-fit: cover;
+  object-position: center;
 }
 .card__caption {
   padding: 1rem 0;
@@ -244,6 +251,10 @@ body::after {
 .pagination__dots--selected {
   background-color: #ee6787;
   border-color: #ee6787;
+}
+.slider {
+  overflow-x: hidden;
+  white-space: nowrap;
 }
 .subscriptions {
   padding: 8rem 3rem;

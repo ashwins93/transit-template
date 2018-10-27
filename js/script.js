@@ -20,3 +20,24 @@ document.body.addEventListener('click', closeNav);
 navbar.addEventListener('click', function(event) {
   event.stopPropagation();
 });
+
+function scrollSlider(x, y, z, element) {
+  let scrollPos = y + z / 2 - x / 2;
+  TweenMax.to(element, 1.5, {
+    scrollLeft: scrollPos,
+    easing: Sine.easeInOut,
+  });
+}
+
+const cards = document.querySelectorAll('.card');
+const slider = document.querySelector('.slider');
+
+cards.forEach(card => {
+  card.addEventListener('click', function() {
+    const z = card.clientWidth;
+    const y = card.offsetLeft - slider.offsetLeft;
+    const x = slider.clientWidth;
+
+    scrollSlider(x, y, z, slider);
+  });
+});
